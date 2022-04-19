@@ -1,0 +1,16 @@
+#BLOQUEIA PASTAS INDEVIDAS PARA USUÁRIOS
+#usuário acessa apenas arquivos index.php para validar sistema
+Options All -Indexes
+
+#Páginas de erro
+ErrorDocument 401 /error/404.html
+ErrorDocument 403 /error/404.html
+ErrorDocument 404 /error/404.html
+ErrorDocument 500 /error/500.html
+
+#BLOQUEAR ESTA CONFIGURAÇÃO => .htaccess
+<files ~ "^.*\.([Hh][Tt][Aa])">
+order allow,deny
+deny from all
+satisfy all
+</files>

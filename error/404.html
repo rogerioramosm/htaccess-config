@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Houston... we have a problem</title>
+</head>
+
+<body>
+  <div style="width: 100%; text-align: center;">
+    <img id="imgError" src="" alt="Página não encontrada..." title="Página não encontrada..." />
+  </div>
+
+  <div id="host"></div>
+</body>
+
+<script>
+  let img = document.getElementById("imgError");
+  let host = window.location.protocol + '//' + window.location.hostname + ':' + window.location.port;
+
+  img.setAttribute("src", host + '/error/404.jpg');
+</script>
+
+</html>
